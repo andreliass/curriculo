@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* * = seletor geral, tambem é o seletor mais fraco, margin ignora as margens, padding é uma margem interna, border box é pra contar o tamanho do elemento a partir da borda interna */
+}
+/* reset do css */
+
+
+body {
+    background-color: rgb(67, 145, 115);
+    background-size: auto 100vh;
+    font-family: arial;
+    font-size: 12px;
+    height: 100vh;
+    /* body seleciona tudo, o primeiro comando é pra imagem de site, mas pode ser so uma cor, igual ta no menu, o segundo é pro tamanho da imagem,100 é porcentagem, vw - horizontal, vh - vertical, o terceiro pra escolher a fonte, baseado no word, o quarto é pra garantir que body fique sempre da altura do view port*/
+  }
+
+
+  /* se a tela tiver pelo menos 400px vai carregar esses estilos */
+  @media (min-width: 400px) {
+      body {
+          font-size: 14px;
+      }
+  }
+
+
+  @media (min-width: 600px) {
+    body {
+      background-attachment: fixed;
+      background-size: cover;
+      font-size: 18px;
+    }
+  }
+
+
+  header {
+      align-items: center;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+
+      /*deixar a parte inicial isolada em cima, display divide a tela */
+  }
+  
+  
+  .menu {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    /* usa-se o ponto para selecionar um elemento específico do html, no caso -menu-, o comando refere-se ao fundo desse elemento, position pra manter a barra de cima em movimento com a pagina*/
+  }
+  
+  
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+    /* mudar a formatação dos elementos do menu, o primeiro é da disposição, o segundo do espaçamento, o terceiro foi pra tirar o o ponto que tava configurado pra lista*/
+  }
+
+
+  .menu li {
+    list-style: none;
+  }
+
+  .menu a {
+      
+      display: block;
+      padding: 1vh 10vw;
+      /* mudar o tamanho do botao do menu */
+  }
+
+
+  .menu a:hover {
+    background-color: rgb(67, 145, 115);
+    color: white;
+  }
+  
+  
+  a{
+    color: rgb(0, 0, 0);
+    font-family: 'Indie Flower';
+    text-decoration: none;
+    /* pra configurar o menu, mudar cor das letras, tirar o sublinhado*/
+  }
+  
+  
+  a:hover {
+    text-decoration: underline;
+    /*pre-definido, pra deixar sublinhado quando o mouse passa no menu*/ 
+  }
+  
+  
+  .site-title {
+    color: whitesmoke;
+    font-family: 'Oswald';
+    font-size: 5em;
+    text-align: center;
+    /*como o titulo e sub titulo vao ter as mesmas configurações, pode juntar assim*/
+  }
+
+
+  .site-subtitle {
+    color: whitesmoke;
+    font-family: 'Oswald';
+    line-height: 1.5em;
+    font-size: 2em;
+    text-align: center;
+  }
+
+
+  .sobre, 
+  .contato, 
+  .portfolio {
+    padding: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    min-height: 100vh;
+  }
+
+
+  .portfolio h2, 
+  .contato h2,
+  .sobre h2 {
+    color: whitesmoke;
+    font-family: 'Baloo 2';
+    font-size: 2em;
+    margin-bottom: 2em;
+    /*descendencia, procurar mais especificamente */
+  }
+
+
+  .sobre p {
+    color: whitesmoke;
+    margin-bottom: 1.4em;
+    text-align: justify;
+    text-indent: 1.4em;
+  }
+
+
+  .sobre a {
+    color: whitesmoke;
+    text-decoration: underline;   
+  }
+
+
+  .sobre .avatar img {
+    float: right;
+    margin-left: 2em;
+  }
+
+
+  .portfolio .grid {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 240px;
+    justify-content: center;
+  /* esse .portfolio é so pra organzação, ja que so tem um grid */
+  }
+
+
+  @media (min-width: 560px) {
+    .portfolio .grid {
+        grid-template-columns: 240px 240px;
+        justify-content: center;
+    }
+  }
+
+
+  @media (min-width: 880px) {
+    .portfolio .grid {
+        grid-template-columns: repeat(3, 240px);
+        justify-content: center;
+    }
+  }
+
+
+  @media (min-width: 1200px) {
+    .portfolio .grid {
+        grid-template-columns: repeat(4, 340px);
+        justify-content: center;
+    }
+  }
+
+
+  .portfolio figure {
+    text-align: center;
+  }
+
+
+  .img-portfolio {
+      color: whitesmoke;
+      height: 200px;
+      object-fit: scale-down;
+      padding: 2em;
+      width: 280px;
+      /* imagens dos subtitulos */
+  }
+
+
+  .img-portfolio:hover {
+      transform: scale(1.8);
+  }
+
+
+  .contato .icons {
+    color: whitesmoke;
+    text-align: center;
+  }
+
+
+  .contato a {
+      color: whitesmoke;
+      font-size: 4em;
+  }
+
+
+  .contato a:hover {
+      text-decoration: none;
+      text-shadow: 0px 0px 10px whitesmoke;
+  }
