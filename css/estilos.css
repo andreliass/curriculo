@@ -199,6 +199,11 @@ body {
   }
 
 
+  .div-portfolio {
+    color: whitesmoke;
+  }
+
+
   .div-portfolio:hover {
       transform: scale(1.8);
       transition-duration: 1s;
